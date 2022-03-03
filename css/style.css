@@ -1,0 +1,384 @@
+html {
+    scroll-behavior: smooth;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+:root {
+    --Pink: hsl(322, 100%, 66%);
+    --Pink-2: rgba(255, 82, 192, 0.7);
+    --Very-Pale-Cyan: hsl(193, 100%, 96%);
+    --Very-Dark-Cyan: hsl(192, 100%, 9%);
+    --Grayish-Blue: hsl(208, 11%, 55%);
+}
+body {
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+}
+/* small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+/* medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+/* small */
+@media (min-width: 1200px) {
+    .container {
+        width: 1200px;
+    }
+}
+.container {
+    margin: 0 auto;
+    padding: 0 20px;
+}
+/* start header */
+header {
+    position: absolute;
+    padding: 25px 0;
+    z-index: 10;
+    width: 100%;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .container button {
+    outline: none;
+    border: none;
+    background-color: white;
+    padding: 15px 60px;
+    font-weight: 700;
+    box-shadow: 0 0 10px 0 rgba(128, 128, 128, 0.5);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .3s;
+}
+header .container button:hover {
+    color: var(--Grayish-Blue);
+}
+@media (max-width: 992px) {
+    header .container > img {
+        height: 25px;
+    }
+    header .container button {
+        padding: 15px 30px;
+    }
+}
+/* end header */
+
+/* start landing */
+.landing {
+    position: relative;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    background-color: aliceblue;
+    background-image: url("../images/bg-hero-desktop.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.landing .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 30px;
+}
+.landing .container > img {
+    height: 450px;
+}
+.landing .container .left-sec h1 {
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+}
+.landing .container .left-sec p {
+    line-height: 1.5;
+    margin: 25px 0;
+    max-width: 100%;
+}
+.landing .container .left-sec button {
+    outline: none;
+    border: none;
+    background-color: var(--Pink);
+    color: white;
+    border-radius: 25px;
+    padding: 15px 75px;
+    cursor: pointer;
+    transition: .3s;
+}
+.landing .container .left-sec button:hover {
+    background-color: var(--Pink-2);
+}
+@media (max-width: 1199px) {
+    .landing .container .left-sec h1 {
+        font-size: 35px;
+    }
+    .landing .container > img {
+        height: 350px;
+        margin-top: 50px;
+    }
+}
+@media (max-width: 992px) {
+    .landing .container .left-sec h1 {
+        font-size: 30px;
+    }
+    .landing .container {
+        flex-direction: column;
+        text-align: center;
+        transform: translateY(50px);
+    }
+}
+@media (max-width: 585px) {
+    .landing .container > img {
+        height: 220px;
+    }
+}
+/* end landing */
+
+/* start features */
+.features .container {
+    padding: 100px 0;
+}
+.features .container > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    background-color: white;
+    box-shadow: 0 0 10px 0 rgba(128, 128, 128, 0.25);
+    border-radius: 10px;
+    padding: 100px;
+}
+.features .container > div img {
+    height: 200px;
+}
+.features .container > div .text {
+    max-width: 500px;
+}
+.features .container > div .text h2 {
+    margin-bottom: 20px;
+}
+.features .container > div .text p {
+    line-height: 1.5;
+}
+@media (max-width: 992px) {
+    .features .container > div {
+        flex-direction: column;
+        padding: 30px;
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-bottom: 40px;
+    }
+    .features .container > div:first-child, 
+    .features .container > div:last-child {
+        flex-direction: column-reverse;
+    }
+    .features .container > div img {
+        margin-bottom: 50px;
+    }
+    .features .container > div .text {
+        text-align: center;
+        width: 100%;
+    }
+    .features .container > div .text h2 {
+        font-size: 25px;
+    }
+}
+/* end features */
+
+/* start footer */
+footer {
+    padding: 200px 0 100px;
+    margin-top: 200px;
+    background-color: var(--Very-Dark-Cyan);
+    color: white;
+    position: relative;
+}
+footer a {
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+footer .build-community {
+    position: absolute;
+    background-color: white;
+    color: black;
+    width: 550px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+    top: -150px;
+    transform: translateX(-50%);
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0 rgba(128, 128, 128, 0.5);
+    text-align: center;
+}   
+footer .build-community h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+footer .build-community button {
+    outline: none;
+    border: none;
+    background-color: var(--Pink);
+    color: white;
+    margin: 20px 0;
+    border-radius: 30px;
+    padding: 20px 80px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: .3s;
+    cursor: pointer;
+}
+footer .build-community button:hover {
+    background-color: var(--Pink-2);
+}
+@media (max-width: 1199px) {
+    footer .build-community h2 {
+        font-size: 18px;
+    }
+}
+@media (max-width: 585px) {
+    footer .build-community {
+        width: 330px;
+    }
+}
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+footer .container div > img {
+    filter: brightness(0) invert(1);
+}
+footer .container .logo-side {
+    flex-basis: 35%;
+}
+footer .container .logo-side p {
+    margin: 25px 0;
+    padding-left: 40px;
+    position: relative;
+    line-height: 1.5;
+}
+footer .container .logo-side div {
+    margin-bottom:20px;
+    padding-left: 40px;
+    position: relative;
+}
+footer .container .logo-side p::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url("../images/icon-location.svg");
+    background-repeat: no-repeat;
+    left: 0;
+    top: 5px;
+}
+footer .container .logo-side div::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    left: 0;
+    top: 5px;
+}
+footer .container .logo-side div:nth-last-of-type(2)::before {
+    background-image: url("../images/icon-phone.svg");
+}
+footer .container .logo-side div:last-child::before {
+    background-image: url("../images/icon-email.svg");
+}
+footer .container .about {
+    flex-basis: 10%;
+}
+footer .container .about a,
+footer .container .career a {
+    margin-bottom: 15px;
+}
+footer .container .career {
+    flex-basis: 15%;
+}
+footer .container .icon {
+    margin-bottom: 100px;
+    display: flex;
+    flex-basis: 10%;
+}
+footer .container .icon i:nth-child(2){
+    margin: 0 15px;
+}
+footer .container .icon i {
+    border-radius: 50%;
+    border: .5px solid gray;
+    height: 40px;
+    width: 40px;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+    transition: .3s;
+}
+footer .container .icon i:hover {
+    color: var(--Pink);
+    border-color: var(--Pink);
+}
+@media (max-width: 992px) {
+    footer .container .logo-side {
+        flex-basis: 60%;
+    }
+    footer .container .about {
+        flex-basis: 30%;
+    }
+    footer .container .icon {
+        flex-basis: 30%;
+    }
+    footer .container .career {
+        flex-basis: 50%;
+    }
+}
+footer .container .copy-right {
+    display: flex;
+    margin-left: auto;
+    font-size: 15px;
+}
+@media (max-width: 585px) {
+    footer .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    footer .container .about {
+        margin-top: 50px;
+    }
+    footer .container .career {
+        margin-bottom: 40px;
+    }
+    footer .container .icon {
+        align-self: center;
+    }
+    footer .container .copy-right {
+        margin-top: -50px;
+        margin-left: 0;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+/* end footer */
